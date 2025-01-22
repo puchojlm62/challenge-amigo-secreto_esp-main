@@ -1,4 +1,5 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
+
 // Iniciación de variables
 let listaDeAmigos = [];  // Esta variable almacena almacena la lista de los amigos ingresados
 let cantidadAmigos = 0; // Almacena la cantidad de amigos ingresados
@@ -16,13 +17,13 @@ function agregarAmigo() {  // Esta función agrega amigos a la lista
         mostrarLista();
     } else {
         // Indica mensaje de error
-        alert ("Por favor, ingrese un nombre válido")
+        alert ("Por favor, ingrese un nombre válido");
     }
 }
-function sortearAmigo() {  // Estaa función selecciona un amigo de la lista
+function sortearAmigo() {  // Estaa función selecciona un amigo de la lista y lo muestra
     if (cantidadAmigos < 2) {
         // Muestra mensaje de no poder sortear por falta de suficientes amigos
-        alert ("Necesita ingresar dos o más amigos para poder sortear")
+        alert ("Necesita ingresar dos o más amigos para poder sortear");
     }  else   {
      //   Selecciona y muestra el amigo sorteado
         let indice = generarIndice();
@@ -60,9 +61,5 @@ function limpiarCaja() {
 function generarIndice() {  //Esta función genera el indice aleatorio para seleccionar un nombre
    return Math.floor(Math.random()*cantidadAmigos);
 }
-
-
-
-
 
 mostrarMensaje('p',"Debe ingresar un nombre usando el alfabeto latino únicamente, sin caracteres especiales ni números")
