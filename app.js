@@ -1,1 +1,55 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
+// Iniciación de variables
+let listaDeAmigos = [];
+let cantidadAmigos = 0; // Almacena la cantidad de amigos ingresados
+let mensajeAyuda = ""; // Esta variable se utiliza para mostrar mensajes al usuario de acuerdo con el nombre ingresado
+
+// Funciones
+function agregarAmigo() {  // Esta función agrega amigos a la lista
+    let nombreIngresado = document.getElementById('amigo').value;
+    // alert (`El nombre que ha introducido es ${nombreIngresado}`);
+    if (validarNombre(nombreIngresado)) {
+        // Ingresa el nombre a la lista y limpia la caja
+        listaDeAmigos.push(nombreIngresado);
+        cantidadAmigos= listaDeAmigos.length;
+        limpiarCaja();
+        limpiarLista();
+        mostrarLista();
+        console.log(listaDeAmigos);
+    } else {
+        
+    }
+}
+function sortearAmigo() {  // Estaa función selecciona un amigo de la lista
+    if (cantidadAmigos < 2) {
+        // Muestra mensaje de no poder sortear
+        mostrarMensaje('p',"Necesita ingresar dos o más amigos para poder sortear"); 
+    }  else   {
+        alert (`Ingresó solo un amigo`);
+    }
+    
+}
+function mostrarMensaje(elemento, mensaje) {  // Esta función muestra mensajes al usuario
+    let elementoHTML = document.querySelector(elemento);
+    elementoHTML.innerHTML = mensaje;
+    return;
+}
+function validarNombre (nombre) { // Sólo se permiten letras de albafeto latin sin caracteres especiales ni numeros
+    let correcto = true;
+    return correcto;
+
+}
+function mostrarLista(){  // Esta función muestra la lista de nombres ingresados
+    let lista = document.getElementById('listaAmigos');
+    listaDeAmigos.forEach((item) => {
+    lista.innerHTML += `<li>${item}</li>`;
+    });
+}
+function limpiarLista() {
+    let lista = document.getElementById('listaAmigos');
+    lista.innerHTML = "";
+}
+function limpiarCaja() {
+    document.querySelector('#amigo').value = '';
+}
+mostrarMensaje('p',"Debe ingresar un nombre usando el alfabeto latino únicamente, sin caracteres especiales")
