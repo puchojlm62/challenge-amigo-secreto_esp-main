@@ -17,7 +17,8 @@ function agregarAmigo() {  // Esta función agrega amigos a la lista
         mostrarLista();
         console.log(listaDeAmigos);
     } else {
-        
+        // Indica mensaje de error
+        alert ("Por favor, ingrese un nombre válido")
     }
 }
 function sortearAmigo() {  // Estaa función selecciona un amigo de la lista
@@ -34,10 +35,12 @@ function mostrarMensaje(elemento, mensaje) {  // Esta función muestra mensajes 
     elementoHTML.innerHTML = mensaje;
     return;
 }
-function validarNombre (nombre) { // Sólo se permiten letras de albafeto latin sin caracteres especiales ni numeros
+function validarNombre (nombre) { // Esta función Valida que no se ingrese texto vacío
     let correcto = true;
-    return correcto;
-
+    if (nombre == "") {
+        correcto = false;
+}
+   return correcto;
 }
 function mostrarLista(){  // Esta función muestra la lista de nombres ingresados
     let lista = document.getElementById('listaAmigos');
@@ -52,4 +55,4 @@ function limpiarLista() {
 function limpiarCaja() {
     document.querySelector('#amigo').value = '';
 }
-mostrarMensaje('p',"Debe ingresar un nombre usando el alfabeto latino únicamente, sin caracteres especiales")
+mostrarMensaje('p',"Debe ingresar un nombre usando el alfabeto latino únicamente, sin caracteres especiales ni números")
