@@ -1,7 +1,7 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 
 // Iniciación de variables
-let listaDeAmigos = [];  // Esta variable almacena almacena la lista de los amigos ingresados
+let listaDeAmigos = [];  // Esta variable almacena la lista de los amigos ingresados
 let cantidadAmigos = 0; // Almacena la cantidad de amigos ingresados
 let mensajeAyuda = ""; // Esta variable se utiliza para mostrar mensajes al usuario
 
